@@ -1,6 +1,6 @@
 ### IPOPT compilation
 **by Enrico Bertolazzi**
-** edit by Minh ** 
+**edit by Minh** 
 **How to compile IPOPT on LINUX or OSX**
 
 The compilation of a mex file involving external shared library is a
