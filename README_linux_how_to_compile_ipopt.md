@@ -1,6 +1,6 @@
 ### IPOPT compilation
 **by Enrico Bertolazzi**
-
+** edit by Minh ** 
 **How to compile IPOPT on LINUX or OSX**
 
 The compilation of a mex file involving external shared library is a
@@ -35,7 +35,9 @@ cd ThirdParty/Mumps
 export ADD_CFLAGS="-fPIC -fno-common"
 export ADD_CXXFLAGS="-fPIC -fno-common"
 export ADD_FFLAGS="-fPIC -fno-common"
-./configure --prefix=/opt/local2 --enable-static --disable-shared --without-metis
+#./configure --prefix=/opt/local2 --enable-static --disable-shared --without-metis (do not use this)
+#./configure --prefix=/opt/local2 --enable-static --disable-shared --with-metis
+
 make
 make install
 ~~~
@@ -104,7 +106,9 @@ export ADD_FFLAGS="-fpic -fno-common -DFUNNY_MA57_FINT -DHAVE_STDIO -DHAVE_STRIN
 and
 
 ~~~
-./configure --enable-static --disable-shared --prefix=/opt/local2 --without-metis --enable-matlab-ma57 --with-pic --with-blas=BUILD --with-lapack=BUILD
+#./configure --enable-static --disable-shared --prefix=/opt/local2 --without-metis --enable-matlab-ma57 --with-pic --with-blas=BUILD --with-lapack=BUILD
+./configure --enable-static --disable-shared --prefix=/opt/local2 --with-metis --enable-matlab-ma57 --with-pic --with-blas=BUILD --with-lapack=BUILD
+
 ~~~
 
 **Compile IPOPT**
